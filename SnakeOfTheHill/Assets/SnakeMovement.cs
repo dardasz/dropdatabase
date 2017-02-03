@@ -52,16 +52,14 @@ public class SnakeMovement : MonoBehaviour {
     void Updatesnake() {
         Tictime++;
 
-
+        for(int i = Snake.Count -1; i > 0 ; i--) {
+            if (i > 0) {
+                Snake[i].transform.position = Snake[i - 1].transform.position;
+            }
+        }
+        Snake[0].transform.position = transform.position;
 
         if (Tictime >= TicTimeLimit) {
-
-			for(int i = Snake.Count -1; i > 0 ; i--) {
-				if (i > 0) {
-					Snake[i].transform.position = Snake[i - 1].transform.position;
-				}
-			}
-			Snake[0].transform.position = transform.position;
 
             switch (dir) {
                 case "w":
