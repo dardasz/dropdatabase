@@ -10,10 +10,10 @@ public class SnakeMovement : MonoBehaviour {
     public string dir = "w";
     public Vector3 pos;
 
-    string w = "w";
-    string a = "a";
-    string s = "s";
-    string d = "d";
+    public string w = "w";
+    public string a = "a";
+    public string s = "s";
+    public string d = "d";
 
     void Inputs()
     {
